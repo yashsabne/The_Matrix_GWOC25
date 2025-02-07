@@ -1,20 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css'
-import Navbar from "./components/Navbar";
+import "./App.css";
+import IndexPage from "./pages/IndexPage";
 
 function App() {
-  
   return (
-    <> 
-    <BrowserRouter>
+    <>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar />} />
+          <Route path="/" element={<IndexPage />} />
         </Routes>
- 
       </BrowserRouter>
- 
     </>
-  )
+  );
 }
 
-export default App
+export default App;
