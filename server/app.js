@@ -1,24 +1,31 @@
-require("dotenv").config()
+require("dotenv").config(); 
 const express = require("express");
 const http = require("http");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
+//importing routes
+const authRoutes  = require('./routes/auth.js')
 
-const server = http.createServer(app);
-const PORT = process.env.PORT || 3001;
-
+//defining the cors
 app.use(cors({
     origin: ['http://localhost:5173'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
 
-
-
 app.use(express.json());
 app.use(express.static("public"));
+
+//defining the routes
+app.use('/auth',authRoutes);
+
+
+
+//statring the server
+const server = http.createServer(app);
+const PORT = process.env.PORT || 3001;
 
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017', {
     dbName: "Kashvi_Saree"

@@ -1,3 +1,4 @@
+ 
 export default function Carousel() {
   return (
     <div
@@ -121,4 +122,4 @@ export default function Carousel() {
       </button>
     </div>
   );
-}
+}  

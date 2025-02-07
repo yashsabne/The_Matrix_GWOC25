@@ -1,83 +1,292 @@
-.bebas-neue-regular {
-  font-family: "Bebas Neue", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-}
+ 
+/* General Styles */
+nav {
+    font-family: Arial, sans-serif;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position:relative;
+  }
+  
+  /* === TOP NAVIGATION === */
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Category Buttons */
+  .categories {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .categories button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: black;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .categories .active {
+    background: black;
+    color: white;
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+  
+  .categories .luxe {
+    color: #a36a4a;
+    font-weight: bold;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  /* === ICONS (Right Side) === */
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Shopping & Wishlist Badge */
+  .icon-badge {
+    position: relative;
+  }
+  
+  .icon-badge span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #a36a4a;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+  
+  /* Search Bar */
+  .search-container {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 14px;
+    width: 400px;
+  }
+  
+  .search-icon {
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  /* === BOTTOM NAVIGATION === */
+  .bottom-nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+  }
+  
+  .bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .bottom-nav button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .bottom-nav .active {
+    color: #a36a4a;
+    border-bottom: 2px solid #a36a4a;
+    padding-bottom: 5px;
+  }
+  
+  /* === BADGES === */
+  .badges {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .badge {
+    background: #a36a4a;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+  }
+  
+  /* === SIDEBAR === */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  
+  .sidebar-section {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .sidebar button {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .sidebar button:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Close Button */
+  .sidebar .close-btn {
+    font-size: 22px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+  }
+   
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
 
-.abril-fatface-regular {
-  font-family: "Abril Fatface", serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 30px;
-}
-
-.bodoni-moda-bodoni {
-  font-family: "Bodoni Moda", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-}
-
-.custom-navbar-width {
-  width: 100vw; /* Takes full viewport width */
-  margin: 0 auto;
-}
-
-/* Remove the default focus outline and box-shadow */
-.form-control:focus {
-  box-shadow: none !important;
-  outline: none !important;
-  border: transparent 1px;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  list-style-type: none;
-
-  li {
-    padding: 6px 0;
-
-    a {
-      position: relative;
+  .menu-icon {
+    display: none;
+    position: absolute;
+    left: 10px;
+  }
+  
+  /* === RESPONSIVE DESIGN === */
+   
+  @media (max-width: 1030px) {
+    .categories {
+      display: none;
+    }
+  
+    .menu-icon {
       display: block;
-      padding: 4px 0;
-      font-family: Lato, sans-serif;
-      color: #ecf0f1;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.5s;
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: black;
-        opacity: 0;
-        transition: opacity 0.5s;
-      }
-
-      &:hover {
-        opacity: 0.6;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
+      font-size: 22px;
+      cursor: pointer;
+    }
+  
+    .bottom-nav {
+      display: none;
     }
   }
-}
-
-.nav-icons {
-  opacity: 0.75 !important;
-}
-
-.nav-icons:hover {
-  cursor: pointer;
-}
+   
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 20px;
+    }
+  
+    .bottom-nav button,
+    .categories button,
+    .sidebar button {
+      font-size: 12px;
+    }
+  
+    .search-container input {
+      width: 200px;
+      font-size: 12px;
+    }
+  }
+    
+  @media (max-width: 480px) {
+    .top-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sidebar {
+      width: 240px;
+    }
+  
+    .sidebar-section h3 {
+      font-size: 14px;
+    }
+  
+    .sidebar button {
+      font-size: 12px;
+    }
+  
+    .badge {
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+  }
+   

@@ -1,16 +1,19 @@
-import Carousel from "../components/Carousel";
+import Carousel from "../includes/Carousel";
 import Navbar from "../includes/Navbar";
 import "../styles/navbar.css";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import CardGiftcardOutlinedIcon from "@mui/icons-material/CardGiftcardOutlined";
-
+import React from 'react'
+// import Navbar from '../components/Navbar';
+// import Carousel from '../components/Carousel';
+ 
 const IndexPage = () => {
   return (
-    <>
-      <Navbar />
-      <Carousel />
+    <> 
+      <Navbar /> 
+      <Carousel/>
       <div className="container py-5">
         {/*
     Using row-cols-1 for extra-small screens, row-cols-sm-2 for small screens,
@@ -115,6 +118,8 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+    <div> 
+    </div>
     </>
   );
 };
