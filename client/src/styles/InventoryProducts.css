@@ -1,0 +1,292 @@
+
+/* Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th, .admin-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Edit Button */
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: rgb(248, 95, 95);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+
+/* Modal Styles */
+.modal-admin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-admin-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-admin-content label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal-admin-content input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.modal-admin-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.save-btn {
+    background: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #218838;
+}
+
+.close-btn {
+    background: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #c82333;
+}
+
+/* Button Styles */
+.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+
+/* Responsive Table */
+@media (max-width: 1024px) {
+    .admin-table th, .admin-table td {
+        padding: 10px;
+    }
+
+    .product-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .action-buttons {
+        gap: 5px;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .admin-table th, .admin-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .product-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Filter Container */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    background: #f3f4f6;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: white;
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+    background: #fff;
+}
+
+/* Price Filter Styling */
+.price-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.price-input {
+    width: 120px;
+    padding: 9px 12px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: white;
+}
+
+.price-input:focus {
+    border-color: #28a745;
+}
+
+/* Sort Button */
+.sort-btn {
+    padding: 9px 16px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.sort-btn:hover {
+    background: #2a2a2a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+    .price-filter {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .price-input {
+        width: 100%;
+    }
+}
+
+
+/* Loading Text */
+.loading-text {
+    text-align: center;
+    /* font-size: 18px;  */
+    color: #007bff;
+    font-weight: bold;
+    /* margin-top: 20px; */
+}
+
+/* No Products Message */
+.no-products {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #888;
+    padding: 15px;
+}

@@ -1,0 +1,227 @@
+.add-product-container {
+    margin: auto;
+    max-width: 700px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(111, 111, 111, 0.1);
+}
+.upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.upload-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.hide-original {
+    display: none;
+}
+
+.upload-box-yash {
+    width: 80px;
+    height: 80px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    font-size: large;
+    color: #888;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-box-yash svg {
+    position: relative;
+    left: 30%;
+    top: 30%;
+    font-size: 32px; 
+    color: #888; 
+    margin: auto;
+}
+
+.image-preview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.upload-box-yash:hover {
+    border-color: #d63384; 
+    background: #e0e0e0;
+}
+
+/* Input Fields */
+.add-product-container label {
+    font-weight: 500;
+    color: #4B5563;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.add-product-container input,
+.add-product-container textarea,
+.add-product-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.add-product-container textarea {
+    resize: none;
+    height: 80px;
+}
+
+.add-product-container input:focus,
+.add-product-container textarea:focus,
+.add-product-container select:focus {
+    border-color: #33ff00;
+}
+
+/* Category & Price Section */
+.product-details {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.product-details select,
+.product-details input {
+    flex: 1;
+}
+
+
+/* Bestseller Checkbox */
+.featured-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.featured-checkbox input {
+    width: auto;
+}
+
+/* Add Button */
+
+.btn-div {
+    display: flex;
+}
+
+.add-product-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px; 
+    font-size: 16px;
+    font-weight: bold;
+    /* cursor: pointer; */
+    transition: 0.3s;
+    text-align: left;
+}
+
+.add-product-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;  /* Optional: Makes the button look disabled */
+}
+
+.message-succ-fail {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.add-product-btn:hover {
+    background: #333;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .add-product-container {
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .upload-box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .add-product-container input,
+    .add-product-container textarea,
+    .add-product-container select {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-product-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .upload-section {
+        flex-wrap: wrap;
+    }
+
+    .upload-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-details {
+        flex-direction: column;
+    }
+
+    .size-selection {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .size-option {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .bestseller-checkbox {
+        font-size: 14px;
+    }
+
+    .add-product-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+.progress-bar-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 8px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    transition: width 0.3s ease-in-out;
+}

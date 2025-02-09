@@ -1,0 +1,179 @@
+/* Overlay for the Modal */
+.modal-overlay-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content-edit {
+    background: #fff;
+    width: 550px;
+    max-width: 95%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Heading */
+.modal-content-edit h2 {
+    font-size: 24px;
+    color: #222;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.modal-content-edit form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Input Fields & Dropdowns */
+.modal-content-edit input,
+.modal-content-edit select,
+.modal-content-edit textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: white;
+}
+
+/* Focus Effect */
+.modal-content-edit input:focus,
+.modal-content-edit select:focus,
+.modal-content-edit textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Label Styling */
+.modal-content-edit label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Flexbox for category, fabric, etc. */
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 600px) {
+    .product-details {
+        flex-direction: column;
+    }
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Update Button */
+.edit-product-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.edit-product-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: scale(1.05);
+}
+
+/* Cancel Button */
+.cancel-btn {
+    flex: 1;
+    background: #ddd;
+    color: black;
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.cancel-btn:hover {
+    background: #bbb;
+    transform: scale(1.05);
+}
+
+/* Animation for Smooth Modal Appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success Badge */
+.success-badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+/* Success Animation */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+}

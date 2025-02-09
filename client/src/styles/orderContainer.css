@@ -1,0 +1,180 @@
+
+/* Order Card */
+
+.orders-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(to right, #f9fafb, #e5e7eb);
+    border-radius: 10px;
+}
+
+.order-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    gap: 20px;
+    transition: 0.3s;
+    color: #374151;
+    border: 1px solid #e0e0e0;
+}
+
+ 
+/* Order Image */
+.order-image img {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background: #f3f4f6;
+    border-radius: 8px;
+}
+
+/* Order Details */
+.order-details {
+    flex-grow: 1;
+    font-size: 15px;
+    color: #333;
+}
+
+.order-items {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.order-address {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #4b5563;
+}
+
+/* Order Summary */
+.order-summary {
+    text-align: left;
+    font-size: 14px;
+    color: #374151;
+    background: #f3f4f6;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* Order Summary Text */
+.order-summary p {
+    margin: 3px 0;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* Order Status Section */
+.order-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Dropdown Styling */
+.order-status-dropdown {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.order-status-dropdown:hover {
+    border-color: #007bff;
+}
+
+/* Status Buttons */
+.status-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Confirm Order */
+.status-btn.confirm {
+    background-color: #007bff;
+    color: white;
+}
+
+.status-btn.confirm:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Pack Order */
+.status-btn.pack {
+    background-color: #ff9800;
+    color: white;
+}
+
+.status-btn.pack:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+/* Ship Order */
+.status-btn.ship {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.status-btn.ship:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+}
+
+/* Deliver Order */
+.status-btn.deliver {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-btn.deliver:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Delivered Status */
+.delivered-status {
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-summary, .order-status {
+        text-align: left;
+        width: 100%;
+    }
+
+    .order-status {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .order-status-dropdown {
+        width: 100%;
+    }
+}
+
