@@ -1,0 +1,64 @@
+.card {
+  position: relative;
+  border: none;
+  border-radius: 0 !important; /* Completely removes any rounding */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-img-top {
+  height: 350px; /* Default height */
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0 !important; /* Forces the image to be rectangular */
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 25px;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 40px 0 40px !important;
+  }
+  .row {
+    display: flex;
+    flex-wrap: nowrap; /* Keeps all cards in one row */
+    gap: 5px !important; /* Reduced gap */
+  }
+
+  .col-4 {
+    flex: 1 1 33% !important; /* Ensures equal width for all 3 cards */
+    padding: 2px !important; /* Further reduces spacing */
+  }
+
+  .card {
+    border-radius: 0 !important; /* Ensures NO rounding */
+  }
+
+  .card-img-top {
+    height: 180px !important; /* Smaller height for mobile */
+    border-radius: 0 !important; /* Removes rounding from the image */
+  }
+
+  .overlay-text {
+    font-size: 14px; /* Smaller text */
+    bottom: 10px !important;
+  }
+}

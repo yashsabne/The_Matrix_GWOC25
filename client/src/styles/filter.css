@@ -1,0 +1,241 @@
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  margin: 20px !important;
+  padding: 0;
+  max-width: 100vw !important;
+}
+
+.accordion-item {
+  border: none !important;
+  border-bottom: 1px solid #ccc !important; /* Added thin border-bottom for separation */
+  box-shadow: none !important;
+}
+
+.accordion-button::after {
+  display: none !important; /* Removes default Bootstrap arrow */
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-weight: 500;
+  box-shadow: none;
+  padding-left: 0 !important;
+  color: black !important;
+  font-size: 13px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: none !important; /* Ensures no background when active */
+  box-shadow: none !important;
+}
+
+.accordion-collapse {
+  border: none !important;
+}
+
+.accordion-body {
+  padding-top: 5px !important;
+  padding-left: 0px !important;
+}
+
+.josefin-sans-josefin {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.price-range p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+}
+
+.count {
+  font-weight: bold;
+  color: #666;
+}
+
+.price-input-container {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.currency-symbol {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.price-input-container input {
+  border: none;
+  outline: none;
+  width: 60px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.apply-button {
+  width: 100%;
+  padding: 10px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.apply-button:hover {
+  background: #5a6268;
+}
+
+.filter-subheading {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Reduced gap */
+}
+
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Reduced gap */
+}
+
+.price-input-container {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced space between inputs */
+}
+
+.subcategories-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.subcategory-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.subcategory-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 12px;
+  padding: 2px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subcategory-list li .count {
+  color: gray;
+  font-size: 12px;
+  min-width: 40px; /* Ensures all counts align properly */
+  text-align: right;
+  margin-left: auto; /* Pushes the count to the right */
+}
+
+.color-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px 0;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.size-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 300px; /* Adjust as needed */
+}
+
+.size-button {
+  padding: 8px 16px;
+  border: 1px solid #535353;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.size-button.selected {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+/* Set up a grid container with gap and padding */
+.product-grid {
+  display: grid;
+  gap: 16px; /* Adjust gap between cards */
+}
+
+/* For screens from <=320px to 425px: 2 cards per row */
+@media (max-width: 425px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For screens >425px to 768px: 3 cards per row */
+@media (min-width: 426px) and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For screens >768px: 4 cards per row */
+@media (min-width: 769px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

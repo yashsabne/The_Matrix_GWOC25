@@ -1,0 +1,95 @@
+/* Ensure styles only apply inside .filter-dropdowns-container */
+.filter-dropdowns-container .custom-dropdown {
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-weight: 500;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Remove Bootstrap's default caret */
+.filter-dropdowns-container .custom-dropdown::after {
+  display: none !important;
+}
+
+/* Hover, focus, and active states - Keep style consistent */
+.filter-dropdowns-container .custom-dropdown:hover,
+.filter-dropdowns-container .custom-dropdown:focus,
+.filter-dropdowns-container .custom-dropdown:active {
+  background: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+  box-shadow: none !important;
+}
+
+/* Arrow icon spacing */
+.filter-dropdowns-container .custom-dropdown span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.rounded-dropdown {
+  padding: 10px;
+  border-radius: 15px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
+  background: white;
+  width: 500px;
+}
+
+.dropdown-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  width: 500px;
+}
+
+.dropdown-option {
+  border: 1px solid black;
+  background: white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+
+.dropdown-option:hover {
+  background-color: black;
+  color: white;
+}
+
+.sort-dropdown {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #333;
+  text-align: left;
+  width: auto;
+  margin-right: 10px;
+}
+
+.rounded-sort-dropdown {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  min-width: auto;
+}
+
+.rounded-sort-dropdown .dropdown-item {
+  font-size: 12px;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.rounded-sort-dropdown .dropdown-item.active,
+.rounded-sort-dropdown .dropdown-item:hover {
+  background: #f5f5f5;
+  color: #000;
+}

@@ -37,14 +37,14 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand border-bottom bg-white sticky-top mt-2 px-3">
       <div className="container-fluid px-0 custom-navbar-width">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <h2 className="bodoni-moda-bodoni" style={{ marginTop: "5px" }}>
             KASHVI
           </h2>
         </a>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto d-none d-sm-flex w-100">
-            <li className="nav-item ms-5">
+          <ul className="navbar-nav me-auto d-none d-sm-flex px-3">
+            <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 Silk
               </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <form className="d-flex me-4" role="search">
+          <form className="d-flex px-4" role="search">
             <input
               ref={searchInputRef} // attach the ref here
               className="form-control form-control-sm rounded-start"

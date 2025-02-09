@@ -38,7 +38,7 @@ export default function Carousel() {
             className="d-block w-100"
             style={{
               width: "100%", // Ensures full width
-              height: "650px", // Adjust height to fit viewport
+              height: "660px", // Adjust height to fit viewport
               objectFit: "cover",
               filter: "brightness(70%)",
             }}
@@ -61,7 +61,7 @@ export default function Carousel() {
             className="d-block w-100"
             style={{
               width: "100%", // Ensures full width
-              height: "650px", // Adjust height to fit viewport
+              height: "660px", // Adjust height to fit viewport
 
               objectFit: "cover",
               filter: "brightness(70%)",
@@ -86,7 +86,7 @@ export default function Carousel() {
             className="d-block w-100"
             style={{
               width: "100%", // Ensures full width
-              height: "650px", // Adjust height to fit viewport
+              height: "660px", // Adjust height to fit viewport
 
               objectFit: "cover",
               filter: "brightness(70%)",

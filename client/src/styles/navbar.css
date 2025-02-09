@@ -17,7 +17,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .custom-navbar-width {
@@ -37,41 +37,42 @@ ul {
   flex-direction: column;
   align-items: start;
   list-style-type: none;
+}
 
-  li {
-    padding: 6px 0;
+ul li {
+  padding: 6px 0;
+}
 
-    a {
-      position: relative;
-      display: block;
-      padding: 4px 0;
-      font-family: Lato, sans-serif;
-      color: #ecf0f1;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.5s;
+ul li a {
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  font-family: Lato, sans-serif;
+  color: #ecf0f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-size: 12px !important;
+}
 
-      &::after {
-        position: absolute;
-        content: "";
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: black;
-        opacity: 0;
-        transition: opacity 0.5s;
-      }
+ul li a::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 
-      &:hover {
-        opacity: 0.6;
-      }
+ul li a:hover {
+  opacity: 0.6;
+}
 
-      &:hover::after {
-        opacity: 1;
-      }
-    }
-  }
+ul li a:hover::after {
+  opacity: 1;
 }
 
 .nav-icons {
@@ -80,4 +81,11 @@ ul {
 
 .nav-icons:hover {
   cursor: pointer;
+}
+
+/* Responsive adjustments: Hide the search bar on screens 768px and below */
+@media (max-width: 768px) {
+  form[role="search"] {
+    display: none !important;
+  }
 }
